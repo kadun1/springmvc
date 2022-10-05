@@ -30,7 +30,7 @@ public class ResponseBodyController {
     }
 
 //    @ResponseBody
-    @GetMapping("/response-body-string-v3")
+@GetMapping("/response-body-string-v3")
     public String responseBodyV3() throws IOException {
         return "ok";
     }
