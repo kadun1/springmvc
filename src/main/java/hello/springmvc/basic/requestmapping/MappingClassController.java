@@ -14,7 +14,6 @@ public class MappingClassController {
      * * 회원 삭제:     DELETE      `/users/{userId}`
      * @return
      */
-
     @GetMapping
     public String user() {
         return "get users";
