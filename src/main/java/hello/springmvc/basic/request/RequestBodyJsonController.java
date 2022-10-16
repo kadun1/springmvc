@@ -51,14 +51,14 @@ public class RequestBodyJsonController {
 
     @ResponseBody
     @PostMapping("/request-body-json-v3")
-    public String requestBodyJsonV3(@RequestBody HelloData data) throws IOException {
+    public String requestBodyJsonV3(@RequestBody HelloData data) {
         log.info("username={}, age={}", data.getUsername(), data.getAge());
         return "ok";
     }
 
     @ResponseBody
     @PostMapping("/request-body-json-v4")
-    public String requestBodyJsonV4(HttpEntity<HelloData> httpEntity) throws IOException {
+    public String requestBodyJsonV4(HttpEntity<HelloData> httpEntity) {
         HelloData data = httpEntity.getBody();
         log.info("username={}, age={}", data.getUsername(), data.getAge());
         return "ok";
@@ -66,7 +66,7 @@ public class RequestBodyJsonController {
 
     @ResponseBody
     @PostMapping("/request-body-json-v5")
-    public HelloData requestBodyJsonV5(@RequestBody HelloData data) throws IOException {
+    public HelloData requestBodyJsonV5(@RequestBody HelloData data) {
         log.info("username={}, age={}", data.getUsername(), data.getAge());
         return data;
     }
