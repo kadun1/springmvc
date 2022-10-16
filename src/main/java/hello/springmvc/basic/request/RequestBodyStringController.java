@@ -29,7 +29,6 @@ public class RequestBodyStringController {
         String messageBody = StreamUtils.copyToString(inputStream, StandardCharsets.UTF_8);
 
         log.info("messageBody={}", messageBody);
-
         response.getWriter().write("ok");
     }
 
@@ -38,7 +37,6 @@ public class RequestBodyStringController {
         String messageBody = StreamUtils.copyToString(inputStream, StandardCharsets.UTF_8);
 
         log.info("messageBody={}", messageBody);
-
         responseWriter.write("ok");
     }
 
@@ -56,7 +54,6 @@ public class RequestBodyStringController {
     public String requestBodyStringV4(@RequestBody String messageBody) {
 
         log.info("messageBody={}", messageBody);
-
         return "ok";
     }
 }
